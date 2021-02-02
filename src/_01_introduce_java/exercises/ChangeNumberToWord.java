@@ -4,78 +4,168 @@ import java.util.Scanner;
 
 public class ChangeNumberToWord {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number : ");
-        int number = scanner.nextInt();
-        int ones = number % 100;
-        int tens = number / 10;
-//        int hunders = (number / 100) % 10;
-        if (number < 0 || number > 999) {
-            System.out.println("Out of ability");
-        } else if (number == 0) {
-            System.out.println("Zero");
-        } else if (number < 20) {
-            switch (ones) {
-                case 1:
-                    System.out.println("One");
-                    break;
-                case 2:
-                    System.out.println("Two");
-                    break;
-                case 3:
-                    System.out.println("Three");
-                    break;
-                case 4:
-                    System.out.println("Four");
-                    break;
-                case 5:
-                    System.out.println("Five");
-                    break;
-                case 6:
-                    System.out.println("Six");
-                    break;
-                case 7:
-                    System.out.println("Seven");
-                    break;
-                case 8:
-                    System.out.println("Eight");
-                    break;
-                case 9:
-                    System.out.println("Nice");
-                    break;
-                case 11:
-                    System.out.println("Eleven");
-                    break;
-                case 12:
-                    System.out.println("Twelve");
-                    break;
-                case 13:
-                    System.out.println("Thirteen");
-                    break;
-                case 14:
-                    System.out.println("Fourteen");
-                    break;
-                case 15:
-                    System.out.println("Fifteen");
-                    break;
-                case 16:
-                    System.out.println("Sixteen");
-                    break;
-                case 17:
-                    System.out.println("Seventeen");
-                    break;
-                case 18:
-                    System.out.println("Eighteen");
-                    break;
-                case 19:
-                    System.out.println("Nineteen");
-                    break;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhập số cần đọc(từ 0 đến 999): ");
+        int number = sc.nextInt();
+        int one = (number % 10);
+        int ten;
+        if (number < 100) {
+            ten = (number - one) / 10;
+        } else {
+            ten = ((number - one) / 10) % 10;
+        }
+        int hundred = (((number - one) / 10) - ten) / 10;
+        String ones = null;
+        String tens = null;
+        String huns = null;
+        switch (one) {
+            case 0:
+                if (ten == 1) {
+                    ones = "ten";
+                } else {
+                    ones = "";
+                }
+                break;
+            case 1:
+                if (ten != 1) {
+                    ones = "one";
+                } else {
+                    ones = "eleven";
+                }
+                break;
+            case 2:
+                if (ten != 1) {
+                    ones = "two";
+                } else {
+                    ones = "twelve";
+                }
+                break;
+            case 3:
+                if (ten != 1) {
+                    ones = "three";
+                } else {
+                    ones = "thirteen";
+                }
+                break;
+            case 4:
+                if (ten != 1) {
+                    ones = "four";
+                } else {
+                    ones = "fourteen";
+                }
+                break;
+            case 5:
+                if (ten != 1) {
+                    ones = "five";
+                } else {
+                    ones = "fifteen";
+                }
+                break;
+            case 6:
+                if (ten != 1) {
+                    ones = "six";
+                } else {
+                    ones = "sixteen";
+                }
+                break;
+            case 7:
+                if (ten != 1) {
+                    ones = "seven";
+                } else {
+                    ones = "seventeen";
+                }
+                break;
+            case 8:
+                if (ten != 1) {
+                    ones = "eight";
+                } else {
+                    ones = "eighteen";
+                }
+                break;
+            case 9:
+                if (ten != 1) {
+                    ones = "nine";
+                } else {
+                    ones = "nineteen";
+                }
+                break;
+            default:
+                ones = "";
+        }
+        switch (ten) {
+            case 2:
+                tens = "twenty";
+                break;
+            case 3:
+                tens = "thirty";
+                break;
+            case 4:
+                tens = "forty";
+                break;
+            case 5:
+                tens = "fifty";
+                break;
+            case 6:
+                tens = "sixty";
+                break;
+            case 7:
+                tens = "seventy";
+                break;
+            case 8:
+                tens = "eighty";
+                break;
+            case 9:
+                tens = "ninety";
+                break;
+            default:
+                tens = "";
+        }
+        switch (hundred) {
+            case 1:
+                huns = "one hundred";
+                break;
+            case 2:
+                huns = "two hundred";
+                break;
+            case 3:
+                huns = "three hundred";
+                break;
+            case 4:
+                huns = "four hundred";
+                break;
+            case 5:
+                huns = "five hundred";
+                break;
+            case 6:
+                huns = "six hundred";
+                break;
+            case 7:
+                huns = "seven hundred";
+                break;
+            case 8:
+                huns = "eight hundred";
+                break;
+            case 9:
+                huns = "nine hundred";
+                break;
+        }
+        if (number >= 0 && number < 20) {
+            if (number == 0) {
+                System.out.println("zero");
+            } else {
+                System.out.println(ones);
             }
-        } else if(number < 100){
-            switch (tens){
-                case 2:
-                    System.out.println("Twenty");
+        } else if (number < 100) {
+            System.out.println(tens + " " + ones);
+        } else if (number < 1000) {
+            if (number % 100 == 0) {
+                System.out.println(huns);
+            } else {
+                System.out.println(huns + " and " + tens + " " + ones);
             }
+        } else {
+            System.out.println("Số nhập không hợp lệ");
         }
     }
 }
+

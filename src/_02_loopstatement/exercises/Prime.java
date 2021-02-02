@@ -4,31 +4,23 @@ import java.util.Scanner;
 
 public class Prime {
     public static void main(String[] args) {
-        int number;
         Scanner scanner = new Scanner(System.in);
-        number = scanner.nextInt();
-        System.out.println(number + "Số nguyên tố đầu tiên là  : ");
+        System.out.println("Nhập só lượng số nguyên tố cần in:");
+        int inputNumber = scanner.nextInt();
+        int n = 2;
         int count = 0;
-        int i = 2;
-        while (count < number) {
-            if (isPrimeNumber(i)) {
-                System.out.println(i + " ");
+        while (count < inputNumber){
+            boolean check = true;
+            for (int i = 2 ; i <= Math.sqrt(n);i++){
+                if (n % i == 0){
+                    check = false;
+                    break;
+                }
+            }
+            if (check){
                 count++;
-            }
-            i++;
+                System.out.println("Số nguyên tố thứ " + count + " là: " + n);
+            } n++;
         }
-    }
-
-    public static boolean isPrimeNumber(int number) {
-        if (number < 2) {
-            return false;
-        }
-        int squareRoot = (int) Math.sqrt(number);
-        for (int i = 2; i <= squareRoot; i++) {
-            if (number % i == 0) {
-                return false;
-            }
-        }
-        return true;
     }
 }
