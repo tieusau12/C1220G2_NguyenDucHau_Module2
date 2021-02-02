@@ -1,13 +1,22 @@
 package _01_introduce_java.exercises;
 
-import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(" Enter the year :");
-        int number = scanner.nextInt();
-        int ones = number /10;
-        System.out.println(ones);
+        //sắp xếp các phần tử trong mảng.
+//        int[] a = {1, 9, 3, 2};
+//        for (int i = 0; i < a.length - 1; i++) {
+//            for (int j = i + 1; j < a.length; j++) {
+//                if (a[i] > a[j]) {
+//                    int x = a[i];
+//                    a[i] = a[j];
+//                    a[j] = x;
+//                }
+//            }
+//        }
+//        for (int element : a){
+//            System.out.println(element);
+//        }
+
     }
 }
