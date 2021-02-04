@@ -2,7 +2,7 @@ package _03_arrays_method.exrcises;
 
 import java.util.Scanner;
 
-public class DemSoKyTu {
+public class NumberOfChar {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập chuỗi");

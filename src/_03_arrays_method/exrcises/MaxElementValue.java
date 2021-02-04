@@ -1,6 +1,6 @@
 package _03_arrays_method.exrcises;
 
-public class PhanTuLonNhat {
+public class MaxElementValue {
     public static void main(String[] args) {
         int arrayNumber[][] = {{13,2,3,4},
                 {5,60,7,8},

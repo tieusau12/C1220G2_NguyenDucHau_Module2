@@ -3,7 +3,7 @@ package _03_arrays_method.exrcises;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class TongDuongCheo {
+public class SumCross {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Nhập độ dài của mảng vuông");

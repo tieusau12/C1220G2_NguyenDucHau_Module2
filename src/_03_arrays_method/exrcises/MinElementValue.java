@@ -2,7 +2,7 @@ package _03_arrays_method.exrcises;
 
 import java.util.Scanner;
 
-public class PhanTuNhoNhat {
+public class MinElementValue {
     public static void main(String[] args) {
         int[] arrayNumber;
         int size;
