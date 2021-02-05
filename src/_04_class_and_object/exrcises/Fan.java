@@ -4,13 +4,13 @@ package _04_class_and_object.exrcises;
 import java.util.Scanner;
 
 public class Fan{
-    final int SLOW = 1;
-    final int MEDIUM = 2;
-    final int FAST = 3;
+    public static final int SLOW = 1;
+    public static final int MEDIUM = 2;
+    public static final int FAST = 3;
     private int speed = SLOW;
     private boolean isOn = false;
     private double radius = 5;
-    private String color = "Blue";
+    private String color = "blue";
     public Fan(){
     }
     public int getSpeed() {
