@@ -45,12 +45,12 @@ public class QuadraticEquation {
         System.out.println("Enter c : ");
         double c = scanner.nextDouble();
         QuadraticEquation quadraticEquation = new QuadraticEquation(a, b, c);
-        if(quadraticEquation.getDiscriminant() <0){
+        if (quadraticEquation.getDiscriminant() < 0) {
             System.out.println("The equation has no roots");
-        }else if(quadraticEquation.getDiscriminant()==0){
+        } else if (quadraticEquation.getDiscriminant() == 0) {
             System.out.println("Equation has one solution " + quadraticEquation.getRoot1());
-        }   else{
-            System.out.println("Equation has two solution :" + quadraticEquation.getRoot1() +" and " + quadraticEquation.getRoot2());
+        } else {
+            System.out.println("Equation has two solution :" + quadraticEquation.getRoot1() + " and " + quadraticEquation.getRoot2());
         }
 
     }
