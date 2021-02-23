@@ -1,4 +1,6 @@
-package _06_inheritance.pratices;
+package _07_interface_abstract.pratices.comparable;
+
+import _06_inheritance.pratices.Shape;
 
 public class Circle extends Shape {
     private double radius = 1.0;
@@ -32,7 +34,7 @@ public class Circle extends Shape {
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return "A Circle with radius="
                 + getRadius()
                 + ", which is a subclass of "
