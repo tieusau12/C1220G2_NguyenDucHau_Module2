@@ -1,5 +1,7 @@
 package _06_inheritance.exrcises.point_2d_3d;
 
+import java.util.Arrays;
+
 public class Point2D {
     private float x = 0.0f;
     private float y = 0.0f;
@@ -26,5 +28,20 @@ public class Point2D {
 
     public void setY(float y) {
         this.y = y;
+    }
+
+    public void setXY(float x, float y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public float[] getXY() {
+        float[] xy = {getX(), getY()};
+        return xy;
+    }
+
+    @Override
+    public String toString() {
+        return "x,y Point2D là " + Arrays.toString(getXY());
     }
 }
