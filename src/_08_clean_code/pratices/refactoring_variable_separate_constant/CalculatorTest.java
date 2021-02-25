@@ -1,4 +1,4 @@
-package _08_clean_code.pratices.rename_variable_separate_constant;
+package _08_clean_code.pratices.refactoring_variable_separate_constant;
 
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
