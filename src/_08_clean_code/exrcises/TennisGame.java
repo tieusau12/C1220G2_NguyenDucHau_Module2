@@ -2,13 +2,13 @@ package _08_clean_code.exrcises;
 
 public class TennisGame {
 
-    public static String getScore(String namePlayerOne, String namePlayerTwo, int scoreOfPlayOne, int scoreOfPlayTwo) {
+    public static String getScore(String nameFirstPlayer, String nameSecondPlayer, int scoreOfFirstPlayer, int scoreOfSecondPlayer) {
         StringBuilder score = new StringBuilder();
         int tempScore;
-        if (scoreOfPlayOne == scoreOfPlayTwo) {
-            score = getStringBuilder(scoreOfPlayOne);
-        } else if (scoreOfPlayOne >= 4 || scoreOfPlayTwo >= 4) {
-            int minusResult = scoreOfPlayOne - scoreOfPlayTwo;
+        if (scoreOfFirstPlayer == scoreOfSecondPlayer) {
+            score = getStringBuilder(scoreOfFirstPlayer);
+        } else if (scoreOfFirstPlayer >= 4 || scoreOfSecondPlayer >= 4) {
+            int minusResult = scoreOfFirstPlayer - scoreOfSecondPlayer;
             if (minusResult == 1) {
                 score = new StringBuilder("Advantage player1");
             } else if (minusResult == -1) {
@@ -22,18 +22,18 @@ public class TennisGame {
             }
         } else {
             for (int i = 1; i < 3; i++) {
-                getTempScore(scoreOfPlayOne, scoreOfPlayTwo, score, i);
+                getTempScore(scoreOfFirstPlayer, scoreOfSecondPlayer, score, i);
             }
         }
         return score.toString();
     }
 
-    private static void getTempScore(int scoreOfPlayOne, int scoreOfPlayTwo, StringBuilder score, int i) {
+    private static void getTempScore(int scoreOfFirstPlayer, int scoreOfSecondPlayer, StringBuilder score, int i) {
         int tempScore;
-        if (i == 1) tempScore = scoreOfPlayOne;
+        if (i == 1) tempScore = scoreOfFirstPlayer;
         else {
             score.append("-");
-            tempScore = scoreOfPlayTwo;
+            tempScore = scoreOfSecondPlayer;
         }
         switch (tempScore) {
             case 0:
@@ -51,9 +51,9 @@ public class TennisGame {
         }
     }
 
-    private static StringBuilder getStringBuilder(int scoreOfPlayOne) {
+    private static StringBuilder getStringBuilder(int scoreOfFirstPlayer) {
         StringBuilder score;
-        switch (scoreOfPlayOne) {
+        switch (scoreOfFirstPlayer) {
             case 0:
                 score = new StringBuilder("Love-All");
                 break;
