@@ -1,11 +1,11 @@
-package _11_stack_queue.exrcises.stack;
+package _11_stack_queue.pratices.optional.stack;
 
-public class ElementInversion {
-    private int arrayStack[];
+public class MyStack {
     private int size;
+    private int arrayStack[];
     private int index = 0;
 
-    public ElementInversion(int size) {
+    public MyStack(int size) {
         this.size = size;
         arrayStack = new int[size];
     }
@@ -30,6 +30,14 @@ public class ElementInversion {
             return true;
         }
         return false;
+    }
+
+
+    public int pop() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Stack is null");
+        }
+        return arrayStack[--index];
     }
 
     public int size() {
