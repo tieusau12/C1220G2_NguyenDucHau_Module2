@@ -1,4 +1,4 @@
-package _04_review;
+package _12_java_collection_framework.exrcises._04_review;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,7 @@ public class MainController {
         personManager.addPerson(new Teacher("Nguyen C", 60, 7000));
         personManager.addPerson(new Teacher("Nguyen D", 70, 8000));
 
-        for(Person person: personManager.getPersonList()){
+        for (Person person : personManager.getPersonList()) {
             System.out.println(person);
         }
 
@@ -19,9 +19,9 @@ public class MainController {
 
         System.out.println("-----------------------------");
 
-        personManager.removePerson(new Person("Nguyen A", 10) );
+        personManager.removePerson(new Person("Nguyen A", 10));
 
-        for(Person person: personManager.getPersonList()){
+        for (Person person : personManager.getPersonList()) {
             System.out.println(person);
         }
 

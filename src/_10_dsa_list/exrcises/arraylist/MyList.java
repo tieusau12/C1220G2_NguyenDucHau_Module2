@@ -49,6 +49,8 @@ public class MyList<E> {
         }
         return (E) elements[i];
     }
-
+     public int size(){
+        return size;
+     }
 
 }

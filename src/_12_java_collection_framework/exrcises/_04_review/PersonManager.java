@@ -1,4 +1,4 @@
-package _04_review;
+package _12_java_collection_framework.exrcises._04_review;
 
 import java.util.List;
 
