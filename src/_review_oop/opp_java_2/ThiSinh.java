@@ -1,24 +1,29 @@
 package _review_oop.opp_java_2;
 
+import java.util.Objects;
+
 public class ThiSinh {
-    private int listStudent;
+    private int idStudent;
     private String nameStudent;
     private String addressStudent;
     private String prioritize;
 
-    public ThiSinh(int listStudent, String nameStudent, String addressStudent, String prioritize) {
-        this.listStudent = listStudent;
+    public ThiSinh() {
+    }
+
+    public ThiSinh(int idStudent, String nameStudent, String addressStudent, String prioritize) {
+        this.idStudent = idStudent;
         this.nameStudent = nameStudent;
         this.addressStudent = addressStudent;
         this.prioritize = prioritize;
     }
 
-    public int getListStudent() {
-        return listStudent;
+    public int getIdStudent() {
+        return idStudent;
     }
 
-    public void setListStudent(int listStudent) {
-        this.listStudent = listStudent;
+    public void setIdStudent(int idStudent) {
+        this.idStudent = idStudent;
     }
 
     public String getNameStudent() {
@@ -47,11 +52,11 @@ public class ThiSinh {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "listStudent=" + listStudent +
+        return "idStudent=" + idStudent +
                 ", nameStudent='" + nameStudent + '\'' +
                 ", addressStudent='" + addressStudent + '\'' +
-                ", prioritize='" + prioritize + '\'' +
-                '}';
+                ", prioritize='" + prioritize + '\'';
     }
+
+
 }

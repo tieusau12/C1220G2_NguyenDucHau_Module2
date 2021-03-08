@@ -50,7 +50,7 @@ public class Product {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == null || !(obj instanceof Product)) {
+        if (!(obj instanceof Product)) {
             return false;
         }
 
