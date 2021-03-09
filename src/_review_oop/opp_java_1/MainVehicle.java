@@ -47,9 +47,9 @@ public class MainVehicle {
         System.out.println("Nhap ten xe : ");
         nameCar = scanner.nextLine();
         System.out.println("Nhap gia tien cua xe : ");
-        priceCar = scanner.nextDouble();
+        priceCar = Double.parseDouble(scanner.nextLine());
         System.out.println("Nhap dung tich xylanh xe : ");
-        vehicleCapacity = scanner.nextDouble();
+        vehicleCapacity = Double.parseDouble(scanner.nextLine());
         Vehicle car = new Vehicle(nameCar, priceCar, vehicleCapacity);
         vehicleManager.add(car);
     }

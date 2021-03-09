@@ -1,9 +1,7 @@
 package _review_oop.opp_java_2;
 
 public class KhoiA extends ThiSinh {
-    private String subject1;
-    private String subject2;
-    private String subject3;
+    private String subject1,subject2,subject3;
 
     public KhoiA() {
     }
@@ -41,9 +39,10 @@ public class KhoiA extends ThiSinh {
 
     @Override
     public String toString() {
-        return super.toString() + " Khoi A " +
-                "subject1='" + subject1 + '\'' +
-                ", subject2='" + subject2 + '\'' +
-                ", subject3='" + subject3 + '\'';
+        return super.toString() + "\n Khối A " +
+                " \n Môn :" + subject1 +
+                "\n Môn :" + subject2 +
+                " \nMôn :" + subject3
+                + "\n ----------------------";
     }
 }

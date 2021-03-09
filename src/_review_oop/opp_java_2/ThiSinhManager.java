@@ -27,13 +27,13 @@ public class ThiSinhManager {
         }
     }
 
-    public void searchByList(int list) {
+    public void searchByList(int id) {
         if (thiSinhList.size() == 0) {
             System.out.println(" Chưa có thí sinh nào trong danh sách ");
         } else {
             boolean flag = false;
             for (ThiSinh ts : thiSinhList) {
-                if (ts.getIdStudent() == list) {
+                if (ts.getIdStudent() == id) {
                     System.out.println(ts);
                     flag = true;
                     break;

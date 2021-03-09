@@ -4,9 +4,7 @@ import java.util.Objects;
 
 public class ThiSinh {
     private int idStudent;
-    private String nameStudent;
-    private String addressStudent;
-    private String prioritize;
+    private String nameStudent,addressStudent,prioritize;
 
     public ThiSinh() {
     }
@@ -52,10 +50,10 @@ public class ThiSinh {
 
     @Override
     public String toString() {
-        return "idStudent=" + idStudent +
-                ", nameStudent='" + nameStudent + '\'' +
-                ", addressStudent='" + addressStudent + '\'' +
-                ", prioritize='" + prioritize + '\'';
+        return "SBD Thí Sinh :" + idStudent +
+                "\n Tên Thí Sinh :" + nameStudent +
+                "\n Địa Chỉ Thí Sinh :" + addressStudent +
+                "\n Độ ưu tiên :" + prioritize;
     }
 
 
