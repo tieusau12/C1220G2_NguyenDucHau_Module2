@@ -8,9 +8,10 @@ public class ClassNameExample {
 
     public ClassNameExample() {
     }
-    public boolean validClassName(String regex){
+
+    public boolean validClassName(String regex) {
         Pattern pattern = Pattern.compile(CLASS_NAME);
-        Matcher matcher =pattern.matcher(regex);
-        return  matcher.matches();
+        Matcher matcher = pattern.matcher(regex);
+        return matcher.matches();
     }
 }

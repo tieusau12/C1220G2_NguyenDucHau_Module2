@@ -8,7 +8,8 @@ public class AccountExample {
 
     public AccountExample() {
     }
-    public boolean validate(String rexger){
+
+    public boolean validate(String rexger) {
         Pattern pattern = Pattern.compile(ACCOUNT_REGEX);
         Matcher matcher = pattern.matcher(rexger);
         return matcher.matches();
